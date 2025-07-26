@@ -419,11 +419,16 @@ export default function KaramisoLP() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">ご購入はこちらから</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Yahoo!ショッピング */}
-            <div className="bg-[#ffdddd] p-6">
-              <Link href="#" target="_blank" rel="noopener noreferrer" className="block">
-                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="bg-[#ffdddd] p-6 rounded-lg">
+              <Link
+                href="https://store.shopping.yahoo.co.jp/aizubrandhall/bbddbfc9a5.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-MEP8aX6vdnhkm0MalTPsgcj8jbQqA0.png"
                     alt="Yahoo!ショッピング"
@@ -433,14 +438,23 @@ export default function KaramisoLP() {
                   />
                 </div>
               </Link>
-              <h4 className="font-bold mt-4 mb-2 text-center">Yahoo!ショッピング</h4>
-              <p className="text-sm text-center">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
+              <h4 className="font-bold mb-2 text-center">Yahoo!ショッピング</h4>
+              <p className="text-sm text-center mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
+              <div className="bg-red-100 border border-red-300 rounded-lg p-3 text-center">
+                <p className="text-red-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
+                <p className="text-red-600 text-xs">（数量により欠品終了）</p>
+              </div>
             </div>
 
             {/* 楽天市場 */}
-            <div className="bg-[#deeeff] p-6">
-              <Link href="#" target="_blank" rel="noopener noreferrer" className="block">
-                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="bg-[#deeeff] p-6 rounded-lg">
+              <Link
+                href="https://item.rakuten.co.jp/aizubrandhall/c/0000000047/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-991Pc669KycdDKQBzO5S93EuS2I3kg.png"
                     alt="楽天市場"
@@ -450,14 +464,23 @@ export default function KaramisoLP() {
                   />
                 </div>
               </Link>
-              <h4 className="font-bold mt-4 mb-2 text-center">楽天市場</h4>
-              <p className="text-sm text-center">楽天ポイントが使える国内最大級のショッピングモールはこちら</p>
+              <h4 className="font-bold mb-2 text-center">楽天市場</h4>
+              <p className="text-sm text-center mb-4">楽天ポイントが使える国内最大級のショッピングモールはこちら</p>
+              <div className="bg-blue-100 border border-blue-300 rounded-lg p-3 text-center">
+                <p className="text-blue-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
+                <p className="text-blue-600 text-xs">（数量により欠品終了）</p>
+              </div>
             </div>
 
             {/* Amazon */}
-            <div className="bg-[#e8ffdd] p-6">
-              <Link href="#" target="_blank" rel="noopener noreferrer" className="block">
-                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="bg-[#e8ffdd] p-6 rounded-lg">
+              <Link
+                href="https://www.amazon.co.jp/stores/page/496B9028-AB60-44BC-8A3B-84F4707D4D95"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-mAXYlXivqE7kA5DfbJhHMDX5hkPVNJ.png"
                     alt="Amazon"
@@ -467,8 +490,12 @@ export default function KaramisoLP() {
                   />
                 </div>
               </Link>
-              <h4 className="font-bold mt-4 mb-2 text-center">Amazon</h4>
-              <p className="text-sm text-center">世界最大のショッピングモールでのお買い物はこちら</p>
+              <h4 className="font-bold mb-2 text-center">Amazon</h4>
+              <p className="text-sm text-center mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
+              <div className="bg-green-100 border border-green-300 rounded-lg p-3 text-center">
+                <p className="text-green-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
+                <p className="text-green-600 text-xs">（数量により欠品終了）</p>
+              </div>
             </div>
           </div>
         </div>
