@@ -10,7 +10,14 @@ function AnalyticsWrapperInner() {
 
   useEffect(() => {
     const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
-    pageview(url)
+    console.log("Analytics Wrapper - URL changed to:", url); // デバッグ用
+    
+    // Google Analyticsスクリプトが読み込まれるまで少し待つ
+    const timer = setTimeout(() => {
+      pageview(url)
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, [pathname, searchParams])
 
   return null
