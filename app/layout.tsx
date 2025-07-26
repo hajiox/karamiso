@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import AnalyticsWrapper from "@/components/analytics-wrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
   other: {
     "format-detection": "telephone=no",
   },
-  generator: 'v0.dev'
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -31,6 +30,20 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#dc2626" />
         <meta name="format-detection" content="telephone=no" />
+
+        {/* Google Analytics */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2EJ6JCB9N2" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2EJ6JCB9N2', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
+          `}
+        </Script>
 
         {/* 追加のSEO設定 */}
         <meta name="author" content="会津ブランド館" />
@@ -199,24 +212,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
-        <AnalyticsWrapper />
-        {children}
-        
-        {/* Google Analytics - bodyの最後に配置 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-5BZQYZ16WM"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5BZQYZ16WM');
-          `}
-        </Script>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

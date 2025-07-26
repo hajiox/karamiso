@@ -1,32 +1,12 @@
 // Google Analytics utility functions
-export const GA_TRACKING_ID = "G-5BZQYZ16WM"
-
-// gtag関数の型定義を強化
-declare global {
-  interface Window {
-    gtag: (
-      command: 'config' | 'event' | 'js' | 'set',
-      targetId: string,
-      config?: Record<string, any>
-    ) => void
-    dataLayer: any[]
-  }
-}
+export const GA_TRACKING_ID = "G-2EJ6JCB9N2"
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
-  // window.gtagの存在を確認してから実行
-  if (typeof window !== "undefined" && window.gtag) {
-    console.log("GA pageview:", url); // デバッグ用
-    try {
-      window.gtag("config", GA_TRACKING_ID, {
-        page_path: url,
-      });
-    } catch (error) {
-      console.error("Google Analytics pageview error:", error)
-    }
-  } else {
-    console.warn("window.gtag is not available");
+  if (typeof window !== "undefined") {
+    window.gtag("config", "G-2EJ6JCB9N2", {
+      page_location: url,
+    })
   }
 }
 
@@ -42,16 +22,12 @@ export const event = ({
   label?: string
   value?: number
 }) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    try {
-      window.gtag("event", action, {
-        event_category: category,
-        event_label: label,
-        value: value,
-      })
-    } catch (error) {
-      console.error("Google Analytics event error:", error)
-    }
+  if (typeof window !== "undefined") {
+    window.gtag("event", action, {
+      event_category: category,
+      event_label: label,
+      value: value,
+    })
   }
 }
 
@@ -89,7 +65,8 @@ export const trackFAQExpand = (question: string) => {
   })
 }
 
-// Google Analyticsが読み込まれているかチェック
-export const isGoogleAnalyticsLoaded = (): boolean => {
-  return typeof window !== "undefined" && typeof window.gtag === "function"
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
 }
