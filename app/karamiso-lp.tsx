@@ -89,7 +89,7 @@ export default function KaramisoLP() {
       id: "2set",
       title: "旨辛タンメンKARAMISO 2食セット",
       description: "麺とスープが2食分。初めての方にもおすすめのスタンダード。",
-      price: "¥1,350",
+      price: "¥1,350（税・送料込）",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP-01.jpg-OorlQiKT1QxYAT8EA8i1e1r4FrGZT9.jpeg",
     },
@@ -97,7 +97,7 @@ export default function KaramisoLP() {
       id: "6set",
       title: "旨辛タンメンKARAMISO 6食セット",
       description: "ストックにも便利なファミリーサイズ。旨辛好きに。",
-      price: "¥3,500",
+      price: "¥3,500（税・送料込）",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP%EF%BC%88%EF%BC%96%E9%A3%9F%EF%BC%89-01.jpg-snXi1s4iT42ztUIqVybH7alDELwYcF.jpeg",
     },
@@ -105,7 +105,7 @@ export default function KaramisoLP() {
       id: "soup5",
       title: "スープのみ5食セット",
       description: "お気に入りの麺と合わせて。アレンジ自在なスープのみ。",
-      price: "¥1,700",
+      price: "¥1,700（税・送料込）",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP%EF%BC%88%E3%82%B9%E3%83%BC%E3%83%97%E3%81%AE%E3%81%BF5%E9%A3%9F%EF%BC%89-01.jpg-75QgSk3SqLMw4dfREkIF2cpAWNvDIj.jpeg",
     },
