@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import AnalyticsWrapper from "./components/analytics-wrapper"
+import AnalyticsWrapper from "@/components/analytics-wrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
