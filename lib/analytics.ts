@@ -15,16 +15,18 @@ declare global {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
+  // window.gtagの存在を確認してから実行
   if (typeof window !== "undefined" && window.gtag) {
+    console.log("GA pageview:", url); // デバッグ用
     try {
       window.gtag("config", GA_TRACKING_ID, {
-        page_location: window.location.origin + url,
         page_path: url,
-        page_title: document.title,
-      })
+      });
     } catch (error) {
       console.error("Google Analytics pageview error:", error)
     }
+  } else {
+    console.warn("window.gtag is not available");
   }
 }
 
