@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   other: {
     "format-detection": "telephone=no",
   },
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

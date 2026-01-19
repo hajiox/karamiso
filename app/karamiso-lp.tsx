@@ -7,8 +7,27 @@ import { Star } from "lucide-react"
 import SharedLayout from "@/components/shared-layout"
 import Link from "next/link"
 
+// Image URLs
+const IMAGES = {
+  hero: "/images/hero-ramen.jpg",
+  product2set: "/images/product-2set.jpg",
+  product6set: "/images/product-6set.jpg",
+  productSoup5: "/images/product-soup5.jpg",
+  soupPackage: "/images/soup-package.jpg",
+  noodles: "/images/noodles.jpg",
+  cooking: "/images/cooking-pot.jpg",
+  vegetables: "/images/ingredients.jpg",
+  step1: "/images/step1.png",
+  step2: "/images/step2.png",
+  step3: "/images/step3.png",
+  avatar: "/images/avatar.jpg",
+  yahoo: "/images/yahoo-btn.png",
+  rakuten: "/images/rakuten-btn.png",
+  amazon: "/images/amazon-btn.png",
+}
+
 export default function KaramisoLP() {
-  const [currentReviews, setCurrentReviews] = useState<any[]>([])
+  const [currentReviews, setCurrentReviews] = useState<typeof reviews>([])
 
   const reviews = [
     {
@@ -79,7 +98,6 @@ export default function KaramisoLP() {
   ]
 
   useEffect(() => {
-    // ランダムに10件のレビューを選択
     const shuffled = [...reviews].sort(() => 0.5 - Math.random())
     setCurrentReviews(shuffled.slice(0, 10))
   }, [])
@@ -90,24 +108,21 @@ export default function KaramisoLP() {
       title: "旨辛タンメンKARAMISO 2食セット",
       description: "麺とスープが2食分。初めての方にもおすすめのスタンダード。",
       price: "¥1,350（税・送料込）",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP-01.jpg-OorlQiKT1QxYAT8EA8i1e1r4FrGZT9.jpeg",
+      image: IMAGES.product2set,
     },
     {
       id: "6set",
       title: "旨辛タンメンKARAMISO 6食セット",
       description: "ストックにも便利なファミリーサイズ。旨辛好きに。",
       price: "¥3,500（税・送料込）",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP%EF%BC%88%EF%BC%96%E9%A3%9F%EF%BC%89-01.jpg-snXi1s4iT42ztUIqVybH7alDELwYcF.jpeg",
+      image: IMAGES.product6set,
     },
     {
       id: "soup5",
       title: "スープのみ5食セット",
       description: "お気に入りの麺と合わせて。アレンジ自在なスープのみ。",
       price: "¥1,700（税・送料込）",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96TOP%EF%BC%88%E3%82%B9%E3%83%BC%E3%83%97%E3%81%AE%E3%81%BF5%E9%A3%9F%EF%BC%89-01.jpg-75QgSk3SqLMw4dfREkIF2cpAWNvDIj.jpeg",
+      image: IMAGES.productSoup5,
     },
   ]
 
@@ -149,7 +164,7 @@ export default function KaramisoLP() {
     },
     {
       question: "保存方法と賞味期限は？",
-      answer: "常温保存でOKです。賞味期限は製造日から2ヶ月で、お届け時は90日以上の商品をお送りします。",
+      answer: "常温保存でOKです。賞味期限は製造日から2ヶ月で、お届け時は45日以上の商品をお送りします。",
     },
     {
       question: "どのくらい辛いですか？（追加）",
@@ -163,7 +178,7 @@ export default function KaramisoLP() {
       <section className="relative">
         <div className="relative h-screen">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0396%EF%BC%88%E8%A3%9C%E6%AD%A3%EF%BC%89.jpg-RTDBklgP83NoVK78mebOFPqatsZVNA.jpeg"
+            src={IMAGES.hero || "/placeholder.svg"}
             alt="旨辛タンメンKARAMISO"
             fill
             className="object-cover object-center"
@@ -192,7 +207,7 @@ export default function KaramisoLP() {
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="relative aspect-[4/3] w-full mb-6">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1279.jpg-4hKO3KR9Go56L9nVnh2rYuXGRsOjRB.jpeg"
+                    src={IMAGES.soupPackage || "/placeholder.svg"}
                     alt="濃厚味噌スープ"
                     fill
                     className="object-cover rounded-lg"
@@ -208,7 +223,7 @@ export default function KaramisoLP() {
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="relative aspect-[4/3] w-full mb-6">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7889.jpg-L13GP28CCDdPXAS6fzkrUKq2XDDc3H.jpeg"
+                    src={IMAGES.noodles || "/placeholder.svg"}
                     alt="多加水中太ストレート麺"
                     fill
                     className="object-cover rounded-lg"
@@ -224,7 +239,7 @@ export default function KaramisoLP() {
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="relative aspect-[4/3] w-full mb-6">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1331.jpg-qqs3RsvTGgx3xEjdqemQ79I6qcGU6m.jpeg"
+                    src={IMAGES.cooking || "/placeholder.svg"}
                     alt="辛い、旨いがクセになる"
                     fill
                     className="object-cover rounded-lg"
@@ -276,7 +291,7 @@ export default function KaramisoLP() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0388.JPG-ze0oIvzCKnF16vl4tTW1nxKaSXh9dZ.jpeg"
+                  src={IMAGES.vegetables || "/placeholder.svg"}
                   alt="キャベツ、小ねぎ、豆腐の準備"
                   fill
                   className="object-cover rounded-lg"
@@ -309,7 +324,7 @@ export default function KaramisoLP() {
               <div className="text-center">
                 <div className="relative aspect-square w-full max-w-[250px] mx-auto mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sato_shouhiko__--sref_httpss.mj.run1ThDyVtNpZs_--v_7_a47c2a92-83ea-437c-9d18-130f68ee2275_0-BV7IX6hJEEndiBNucnYo8mTDVgzrpy.png"
+                    src={IMAGES.step1 || "/placeholder.svg"}
                     alt="麺を茹でる"
                     fill
                     className="object-contain rounded-lg"
@@ -325,7 +340,7 @@ export default function KaramisoLP() {
               <div className="text-center">
                 <div className="relative aspect-square w-full max-w-[250px] mx-auto mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sato_shouhiko__--sref_httpss.mj.runSSlO0muDMk0_--v_7_7254e103-7c66-47ab-99f5-ac4999d70124_2-L1O5S4Yper6gwoAKfMG7bwfQejl48v.png"
+                    src={IMAGES.step2 || "/placeholder.svg"}
                     alt="スープを煮込む"
                     fill
                     className="object-contain rounded-lg"
@@ -341,7 +356,7 @@ export default function KaramisoLP() {
               <div className="text-center">
                 <div className="relative aspect-square w-full max-w-[250px] mx-auto mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sato_shouhiko__--sref_httpss.mj.run2kz71GiZc_I_--v_7_aaea257a-bdef-42dd-a247-ec541a65b358_2-gjz2dfBJPmvDkm4rJlRi7q7pFbsuuE.png"
+                    src={IMAGES.step3 || "/placeholder.svg"}
                     alt="完成"
                     fill
                     className="object-contain rounded-lg"
@@ -377,7 +392,7 @@ export default function KaramisoLP() {
                   <CardTitle className="flex items-center gap-4">
                     <div className="relative w-12 h-12">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%94%B7%E6%80%A7%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%EF%BC%88AI%EF%BC%89.jpg-McCCXtiDIQ87lMxGYb31y5bEh46dem.jpeg"
+                        src={IMAGES.avatar || "/placeholder.svg"}
                         alt={`お客様 ${i + 1} のアバター`}
                         fill
                         className="rounded-full object-cover"
@@ -430,7 +445,7 @@ export default function KaramisoLP() {
               >
                 <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-MEP8aX6vdnhkm0MalTPsgcj8jbQqA0.png"
+                    src={IMAGES.yahoo || "/placeholder.svg"}
                     alt="Yahoo!ショッピング"
                     width={200}
                     height={200}
@@ -441,8 +456,7 @@ export default function KaramisoLP() {
               <h4 className="font-bold mb-2 text-center">Yahoo!ショッピング</h4>
               <p className="text-sm text-center mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
               <div className="bg-red-100 border border-red-300 rounded-lg p-3 text-center">
-                <p className="text-red-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
-                <p className="text-red-600 text-xs">（数量により欠品終了）</p>
+                <p className="text-red-700 font-bold text-sm">初めて当店をご利用のお客様に300円クーポン進呈中！</p>
               </div>
             </div>
 
@@ -456,7 +470,7 @@ export default function KaramisoLP() {
               >
                 <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-991Pc669KycdDKQBzO5S93EuS2I3kg.png"
+                    src={IMAGES.rakuten || "/placeholder.svg"}
                     alt="楽天市場"
                     width={200}
                     height={200}
@@ -466,9 +480,8 @@ export default function KaramisoLP() {
               </Link>
               <h4 className="font-bold mb-2 text-center">楽天市場</h4>
               <p className="text-sm text-center mb-4">楽天ポイントが使える国内最大級のショッピングモールはこちら</p>
-              <div className="bg-blue-100 border border-blue-300 rounded-lg p-3 text-center">
-                <p className="text-blue-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
-                <p className="text-blue-600 text-xs">（数量により欠品終了）</p>
+              <div className="bg-red-100 border border-red-300 rounded-lg p-3 text-center">
+                <p className="text-red-700 font-bold text-sm">初めて当店をご利用のお客様に300円クーポン進呈中！</p>
               </div>
             </div>
 
@@ -482,7 +495,7 @@ export default function KaramisoLP() {
               >
                 <div className="bg-white p-4 mx-auto max-w-[200px] aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow mb-4">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-mAXYlXivqE7kA5DfbJhHMDX5hkPVNJ.png"
+                    src={IMAGES.amazon || "/placeholder.svg"}
                     alt="Amazon"
                     width={200}
                     height={200}
@@ -492,10 +505,6 @@ export default function KaramisoLP() {
               </Link>
               <h4 className="font-bold mb-2 text-center">Amazon</h4>
               <p className="text-sm text-center mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
-              <div className="bg-green-100 border border-green-300 rounded-lg p-3 text-center">
-                <p className="text-green-700 font-bold text-sm">先着100商品限り5%OFFクーポン発行中</p>
-                <p className="text-green-600 text-xs">（数量により欠品終了）</p>
-              </div>
             </div>
           </div>
         </div>
