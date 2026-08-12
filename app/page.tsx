@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "旨辛タンメンKARAMISO｜家庭で仕上げる本格旨辛ラーメン",
     description:
       "濃厚辛味噌スープ×中太160g生麺。ラーメン屋のような一杯をご自宅で。野菜たっぷり、インスタント感のない本格派。先着100商品限り5%OFFクーポン発行中！",
-    url: "https://your-domain.com",
+    url: "https://karamiso.aizubrandhall-lp2.com",
     siteName: "会津ブランド館",
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://your-domain.com",
+    canonical: "https://karamiso.aizubrandhall-lp2.com",
   },
   category: "food",
 }

@@ -7,10 +7,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://karamiso.aizubrandhall-lp2.com"),
   other: {
     "format-detection": "telephone=no",
   },
@@ -83,7 +80,7 @@ export default function RootLayout({
                   addressCountry: "JP",
                 },
                 telephone: "0242-25-4141",
-                url: "https://your-domain.com",
+                url: "https://karamiso.aizubrandhall-lp2.com",
               },
               offers: [
                 {
@@ -169,13 +166,13 @@ export default function RootLayout({
                   "@type": "ListItem",
                   position: 1,
                   name: "ホーム",
-                  item: "https://your-domain.com",
+                  item: "https://karamiso.aizubrandhall-lp2.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "旨辛タンメンKARAMISO",
-                  item: "https://your-domain.com",
+                  item: "https://karamiso.aizubrandhall-lp2.com",
                 },
               ],
             }),
@@ -190,7 +187,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "会津ブランド館",
-              url: "https://your-domain.com",
+              url: "https://karamiso.aizubrandhall-lp2.com",
               logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%80%90%E9%AB%98%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%80%91%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E6%96%B0%E3%83%AD%E3%82%B4%E3%80%90%E9%BB%92%E3%80%91.jpg-jGJwCa3HfNXU3pXG4DdPG8tGgUUWid.jpeg",
               address: {
                 "@type": "PostalAddress",
