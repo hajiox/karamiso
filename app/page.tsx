@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-XvDLeLJlxKyKRaaUcrWpu0Boj4NBxQ.jpeg",
-        width: 1200,
-        height: 630,
+        width: 1217,
+        height: 647,
         alt: "旨辛タンメンKARAMISO - 豆腐と野菜たっぷりの本格辛味噌ラーメン",
         type: "image/jpeg",
       },
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
       {
         url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-XvDLeLJlxKyKRaaUcrWpu0Boj4NBxQ.jpeg",
         alt: "旨辛タンメンKARAMISO - 豆腐と野菜たっぷりの本格辛味噌ラーメン",
-        width: 1200,
-        height: 630,
+        width: 1217,
+        height: 647,
       },
     ],
   },
